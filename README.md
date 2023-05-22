@@ -1,4 +1,4 @@
-# Module 9 Challenge: Note Taker
+# Module 11 Challenge: Note Taker
 
 ![Screenshot](/pictures/Screenshot.png)
 [Video Demonstration](https://drive.google.com/file/d/14w6SAXSuo_Ze7Adk0mlZLTdE2T3Ow64m/view)
