@@ -4,19 +4,21 @@ const fs = require("fs");
 
 //handles the getting of the notes
 router.get('/api/notes', async (req, res) => {
-    const dbJson = await JSON.parse(fs.readFileSync("./db/db.json"))
+    const dbJson = await JSON.parse(fs.readFileSync("db/db.json"))
     res.json(dbJson);
 });
 
 //handles the posting of the notes
-router.post('api/notes', (req, res) => {
-    const dbJson = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
-    const newFeedback = {
+router.post('/api/notes', (req, res) => {
+    const dbJson = JSON.parse(fs.readFileSync("db/db.json", "utf8"));
+    const newNote = 
+    {
         title: req.body.title,
         text: req.body.text,
         id: uuidv4(),
     };
-    dbJson.push(newFeedback);
+
+    dbJson.push(newNote);
     fs.writeFileSync("db/db.json",JSON.stringify(dbJson));
     res.json(dbJson);
 });
